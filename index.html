@@ -5,10 +5,50 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Login Form</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script src='main.js'></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 <body>
+    <!--header-->
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav_logo">PTNS</a>
     
+            <ui class="nav_items">
+                <li class="nav_item">
+                    <a href="#" class="nav_link">Home</a>
+                    <a href="#" class="nav_link">Product</a>
+                    <a href="#" class="nav_link">Services</a>
+                    <a href="#" class="nav_link">Contact</a>
+                </li>
+            </ui>
+    
+            <button class="button">Login</button>
+        </nav>
+    </header>
+
+    <!--hoem-->
+    <section class="home">
+        <div class="form_container">
+            <i class="uil uil-times form_close"></i>
+            <!--login form-->
+            <div class="form login_form">
+                <form action="#">
+                    <h2>Login</h2>
+
+                    <div class="input_box">
+                        <input type="email" placeholder="Nhập email">
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Nhập password">
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
