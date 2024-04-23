@@ -147,10 +147,12 @@ a{
     font-size: 20px;
     color: #070707;
 }
+.input_box i.user,
 .input_box i.email,
 .input_box i.password {
     left: 0;
 }
+.input_box input:focus ~ i.user,
 .input_box input:focus ~ i.email,
 .input_box input:focus ~ i.password{
     color: #7d2ae8;
