@@ -25,7 +25,7 @@
                 </li>
             </ui>
     
-            <button class="button">Login</button>
+            <button class="button" id="form-open">Đăng Nhập</button>
         </nav>
     </header>
 
@@ -36,7 +36,7 @@
             <!--login form-->
             <div class="form login_form">
                 <form action="#">
-                    <h2>Login</h2>
+                    <h2>Đăng nhập</h2>
 
                     <div class="input_box">
                         <input type="email" placeholder="Nhập email" required>
@@ -65,9 +65,9 @@
             </div>
 
             <!--Signup From-->
-            <div class="form login_form">
+            <div class="form signup_form">
                 <form action="#">
-                    <h2>Login</h2>
+                    <h2>Đăng ký</h2>
 
                     <div class="input_box">
                         <input type="email" placeholder="Nhập email" required>
@@ -78,23 +78,22 @@
                         <i class="uil uil-lock password"></i>
                         <i class="uil uil-eye-slash pw_hide"></i>
                     </div>
-
-                    <div class="option_field">
-                        <span class="checkbox">
-                            <input type="checkbox" id="check">
-                            <label for="check">Ghi nhớ</label>
-                        </span>
-                        <a href="#" class="forgot_pw">Quên mật khẩu?</a>
+                    <div class="input_box">
+                        <input type="password" placeholder="Nhập lại password" required>
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
                     </div>
 
-                    <button class="button">Đăng nhập</button>
+                    <button class="button">Đăng ký</button>
 
                     <div class="login_signup">
-                        Tạo tài khoản <a href="#" id="signup">Đăng ký</a>
+                        Tạo tài khoản <a href="#" id="login">Đăng nhập</a>
                     </div>
                 </form>
             </div>
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
