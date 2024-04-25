@@ -31,3 +31,64 @@ loginBtn.addEventListener("click", (e) => {
     e.preventDefault();
     formContainer.classList.remove("active");
 });
+
+let loginForm = document.querySelector("#loginForm");
+let usernameInput = document.querySelector("#tk");
+let passwordInput = document.querySelector("#mk");
+
+let signupForm = document.querySelector('#signupForm');
+let tk = document.getElementById('tk');
+let email = document.getElementById('email');
+let mk = document.getElementById('mk');
+let r_mk = document.getElementById('r-mk'); 
+
+
+loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let username = usernameInput.value;
+    let password = passwordInput.value;
+
+    if (username.trim() === "" || password.trim() === "") {
+        alert("Vui lòng nhập tên đăng nhập và mật khẩu");
+        return;
+    }
+
+    alert("Đăng nhập thành công!");
+});
+
+signupForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    let tkValue = signupForm.querySelector("#tk").value.trim();
+    let emailValue = signupForm.querySelector("#email").value.trim();
+    let mkValue = signupForm.querySelector("#mk").value.trim();
+    let rmkValue = signupForm.querySelector("#r-mk").value.trim();
+
+    if (!tkValue || !emailValue || !mkValue || !rmkValue) {
+        alert('Vui lòng điền đầy đủ thông tin');
+        return;
+    }
+
+    if (tkValue.length < 4) {
+        alert('Tên đăng nhập phải có ít nhất 4 ký tự');
+        return;
+    }
+
+    let emailsyntax = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailsyntax.test(emailValue)) {
+        alert('Email không hợp lệ');
+        return;
+    }
+
+    if (mkValue.length < 8) {
+        alert('Mật khẩu phải có ít nhất 8 ký tự');
+        return;
+    }
+
+    if (mkValue !== rmkValue) {
+        alert('Mật khẩu nhập lại không trùng khớp');
+        return;
+    }
+        alert('Đăng ký thành công! Hãy quay lại trang đăng nhập!');
+});
